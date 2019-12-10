@@ -1,0 +1,437 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "REST_EXPRESS_JS",
+    "description": "TODO: Add Description",
+    "contact": {}
+  },
+  "host": "localhost:3000",
+  "basePath": "/api",
+  "securityDefinitions": {},
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/products": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "GET PRODUCT",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "GETPRODUCT",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "default": "Bearer {token}",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "SAVE PRODUCT",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "SAVEPRODUCT",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "default": "Bearer {token}",
+            "type": "string"
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/SAVEPRODUCTREQUEST"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/products/7": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "GET PRODUCT ID",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "GETPRODUCTID",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "default": "Bearer {token}",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "delete": {
+        "description": "TODO: Add Description",
+        "summary": "DELETE PRODUCT",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "DELETEPRODUCT",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "default": "Bearer {token}",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/products/2": {
+      "put": {
+        "description": "TODO: Add Description",
+        "summary": "UPDATE PRODUCT",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "UPDATEPRODUCT",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "default": "Bearer {token}",
+            "type": "string"
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UPDATEPRODUCTREQUEST"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/users/register": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "SAVE USER / REGISTER",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "SAVEUSER/REGISTER",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "default": "Bearer {token}",
+            "type": "string"
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/SAVEUSER~1REGISTERREQUEST"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/login": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "LOGIN WITH JWT",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "LOGINWITHJWT",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "default": "Bearer {token}",
+            "type": "string"
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/LOGINWITHJWTREQUEST"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/cektoken": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "CEK TOKEN JWT",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "CEKTOKENJWT",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "default": "Bearer {token}",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/logout": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "LOGOUT",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "LOGOUT",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "default": "Bearer {token}",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "SAVEPRODUCTREQUEST": {
+      "title": "SAVEPRODUCTREQUEST",
+      "example": {
+        "nama": "aki",
+        "price": "200000"
+      },
+      "type": "object",
+      "properties": {
+        "nama": {
+          "type": "string"
+        },
+        "price": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "nama",
+        "price"
+      ]
+    },
+    "UPDATEPRODUCTREQUEST": {
+      "title": "UPDATEPRODUCTREQUEST",
+      "example": {
+        "nama": "aki",
+        "price": "100000"
+      },
+      "type": "object",
+      "properties": {
+        "nama": {
+          "type": "string"
+        },
+        "price": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "nama",
+        "price"
+      ]
+    },
+    "SAVEUSER/REGISTERREQUEST": {
+      "title": "SAVEUSER/REGISTERREQUEST",
+      "example": {
+        "username": "ubay dillah",
+        "email": "ubay2@gmail.com",
+        "password": "1234"
+      },
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "username",
+        "email",
+        "password"
+      ]
+    },
+    "LOGINWITHJWTREQUEST": {
+      "title": "LOGINWITHJWTREQUEST",
+      "example": {
+        "email": "zaki1@gmail.com",
+        "password": "zaki123"
+      },
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "email",
+        "password"
+      ]
+    }
+  },
+  "tags": [
+    {
+      "name": "Misc",
+      "description": ""
+    }
+  ]
+}
